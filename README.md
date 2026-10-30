@@ -41,9 +41,22 @@ Keys and values must be non-null, and all TTLs must be greater than zero.
 ## Build and Test
 
 ```sh
+# Build and package the library JAR
+./run.sh build
+
 # Run all tests using the runner script
 ./run.sh test
 
-# Run the live interactive feature demonstration
+# Run the live interactive feature demonstration directly from the built JAR
 ./run.sh demo
+
+# Run all tests, package the library, and execute the live demo
+./run.sh all
+
+# Clean build artifacts
+./run.sh clean
 ```
+
+The packaged library is generated at:
+- `target/expiring-map-1.0.0.jar` (main executable library JAR)
+- `target/expiring-map-1.0.0-sources.jar` (sources JAR)
